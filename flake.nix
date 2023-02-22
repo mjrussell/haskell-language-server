@@ -239,7 +239,7 @@
         };
 
         ghc902Config = (import ./configuration-ghc-90.nix) { inherit pkgs inputs; };
-        ghc925Config = (import ./configuration-ghc-92.nix) { inherit pkgs inputs; };
+        ghc926Config = (import ./configuration-ghc-92.nix) { inherit pkgs inputs; };
         ghc943Config = (import ./configuration-ghc-94.nix) { inherit pkgs inputs; };
 
         # GHC versions
@@ -249,13 +249,13 @@
           ghcVersion = "ghc" + (pkgs.lib.replaceStrings ["."] [""] pkgs.haskellPackages.ghc.version);
           cases = {
             ghc902 = ghc902Config.tweakHpkgs (pkgs.hlsHpkgs "ghc902");
-            ghc925 = ghc925Config.tweakHpkgs (pkgs.hlsHpkgs "ghc925");
+            ghc926 = ghc926Config.tweakHpkgs (pkgs.hlsHpkgs "ghc926");
             ghc943 = ghc943Config.tweakHpkgs (pkgs.hlsHpkgs "ghc943");
           };
           in { default = cases."${ghcVersion}"; } // cases;
 
         ghc902 = supportedGHCs.ghc902;
-        ghc925 = supportedGHCs.ghc925;
+        ghc926 = supportedGHCs.ghc926;
         ghc943 = supportedGHCs.ghc943;
         ghcDefault = supportedGHCs.default;
 
@@ -377,7 +377,7 @@
         simpleDevShells = {
           haskell-language-server-dev = mkDevShell ghcDefault "cabal.project";
           haskell-language-server-902-dev = mkDevShell ghc902 "cabal.project";
-          haskell-language-server-925-dev = mkDevShell ghc925 "cabal.project";
+          haskell-language-server-926-dev = mkDevShell ghc926 "cabal.project";
           haskell-language-server-943-dev = mkDevShell ghc943 "cabal.project";
         };
 
@@ -385,7 +385,7 @@
         nixDevShells = {
           haskell-language-server-dev-nix = mkDevShellWithNixDeps ghcDefault "cabal.project";
           haskell-language-server-902-dev-nix = mkDevShellWithNixDeps ghc902 "cabal.project";
-          haskell-language-server-925-dev-nix = mkDevShellWithNixDeps ghc925 "cabal.project";
+          haskell-language-server-926-dev-nix = mkDevShellWithNixDeps ghc926 "cabal.project";
           haskell-language-server-943-dev-nix = mkDevShellWithNixDeps ghc943 "cabal.project";
         };
 
@@ -394,14 +394,14 @@
         envShells = {
           haskell-language-server-dev-env = mkEnvShell ghcDefault;
           haskell-language-server-902-dev-env = mkEnvShell ghc902;
-          haskell-language-server-925-dev-env = mkEnvShell ghc925;
+          haskell-language-server-926-dev-env = mkEnvShell ghc926;
           haskell-language-server-943-dev-env = mkEnvShell ghc943;
         };
 
         allPackages = {
           haskell-language-server = mkExe ghcDefault;
           haskell-language-server-902 = mkExe ghc902;
-          haskell-language-server-925 = mkExe ghc925;
+          haskell-language-server-926 = mkExe ghc926;
           haskell-language-server-943 = mkExe ghc943;
         };
 
