@@ -6,6 +6,7 @@ let
     # get it removed from the top level list of requirement and it is not pull
     # in the nix shell.
     "shake-bench"
+    "fourmolu"
   ];
 
   hpkgsOverride = hself: hsuper:
