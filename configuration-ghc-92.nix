@@ -26,7 +26,7 @@ let
 
       ghc-exactprint =
         hself.callCabal2nix "ghc-exactprint" inputs.ghc-exactprint-150 { };
-      fourmolu = hself.fourmolu_0_9_0_0;
+      # fourmolu = hself.fourmolu_0_9_0_0;
       hlint = appendConfigureFlag (hself.callCabal2nix "hlint" inputs.hlint-341 {}) "-fghc-lib";
 
       stylish-haskell = appendConfigureFlag  hsuper.stylish-haskell "-fghc-lib";
