@@ -6,7 +6,6 @@ let
     # get it removed from the top level list of requirement and it is not pull
     # in the nix shell.
     "shake-bench"
-    "fourmolu"
   ];
 
   hpkgsOverride = hself: hsuper:
@@ -26,7 +25,7 @@ let
 
       ghc-exactprint =
         hself.callCabal2nix "ghc-exactprint" inputs.ghc-exactprint-150 { };
-      # fourmolu = hself.fourmolu_0_9_0_0;
+      fourmolu = hself.callCabal2nix "fourmolu" inputs.fourmolu-0900 { };
       hlint = appendConfigureFlag (hself.callCabal2nix "hlint" inputs.hlint-341 {}) "-fghc-lib";
 
       stylish-haskell = appendConfigureFlag  hsuper.stylish-haskell "-fghc-lib";

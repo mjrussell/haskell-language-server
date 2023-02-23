@@ -63,6 +63,10 @@
       url = "https://hackage.haskell.org/package/fourmolu-0.10.1.0/fourmolu-0.10.1.0.tar.gz";
       flake = false;
     };
+    fourmolu-0900 = {
+      url = "https://hackage.haskell.org/package/fourmolu-0.9.0.0/fourmolu-0.9.0.0.tar.gz";
+      flake = false;
+    };
     hlint-341 = {
       url = "https://hackage.haskell.org/package/hlint-3.4.1/hlint-3.4.1.tar.gz";
       flake = false;
