@@ -12,7 +12,6 @@ packages:
          ./plugins/hls-cabal-fmt-plugin
          ./plugins/hls-tactics-plugin
          ./plugins/hls-stylish-haskell-plugin
---         ./plugins/hls-fourmolu-plugin
          ./plugins/hls-class-plugin
          ./plugins/hls-eval-plugin
          ./plugins/hls-explicit-imports-plugin
@@ -71,7 +70,6 @@ constraints:
   ghc-check -ghc-check-use-package-abis,
   ghc-lib-parser-ex -auto,
   stylish-haskell +ghc-lib,
-  -- fourmolu -fixity-th,
   setup.happy == 1.20.1.1,
   happy == 1.20.1.1,
   filepath installed,

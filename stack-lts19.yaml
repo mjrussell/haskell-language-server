@@ -25,7 +25,6 @@ packages:
   - ./plugins/hls-qualify-imported-names-plugin
   - ./plugins/hls-stylish-haskell-plugin
   - ./plugins/hls-floskell-plugin
-  - ./plugins/hls-fourmolu-plugin
   - ./plugins/hls-pragmas-plugin
   - ./plugins/hls-module-name-plugin
   - ./plugins/hls-ormolu-plugin
@@ -45,7 +44,6 @@ extra-deps:
 # needed for tests of hls-cabal-fmt-plugin
 - cabal-fmt-0.1.6@sha256:54041d50c8148c32d1e0a67aef7edeebac50ae33571bef22312f6815908eac19,3626
 - floskell-0.10.6@sha256:e77d194189e8540abe2ace2c7cb8efafc747ca35881a2fefcbd2d40a1292e036,3819
-- fourmolu-0.6.0.0
 - ghc-lib-9.2.4.20220729
 - ghc-lib-parser-9.2.4.20220729
 - ghc-lib-parser-ex-9.2.0.4
