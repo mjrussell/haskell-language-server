@@ -5,7 +5,6 @@ let
     # That one is not technically a plugin, but by putting it in this list, we
     # get it removed from the top level list of requirement and it is not pull
     # in the nix shell.
-    "fourmolu"
     "shake-bench"
   ];
 
