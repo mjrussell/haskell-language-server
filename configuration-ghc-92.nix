@@ -5,6 +5,7 @@ let
     # That one is not technically a plugin, but by putting it in this list, we
     # get it removed from the top level list of requirement and it is not pull
     # in the nix shell.
+    "fourmolu"
     "shake-bench"
   ];
 
@@ -33,7 +34,7 @@ let
 
       ormolu = hself.callCabal2nix "ormolu" inputs.ormolu-052 {};
 
-      fourmolu = hself.callHackage "fourmolu" "0.10.1.0" {};
+      # fourmolu = hself.callHackage "fourmolu" "0.10.1.0" {};
 
       stylish-haskell = appendConfigureFlag  hsuper.stylish-haskell "-fghc-lib";
 
