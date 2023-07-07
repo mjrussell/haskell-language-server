@@ -20,8 +20,10 @@ let
       lsp = hself.callCabal2nix "lsp" inputs.lsp {};
       lsp-types = hself.callCabal2nix "lsp-types" inputs.lsp-types {};
       lsp-test = hself.callCabal2nix "lsp-test" inputs.lsp-test {};
+      # For building using our nixpkgs
       strict = hself.callHackage "strict" "0.4.0.1" {};
       these = hself.callHackage "these" "1.1.1.1" {};
+      assoc = hself.callHackage "assoc" "1.0.2" {};
 
       # Re-generate HLS drv excluding some plugins
       haskell-language-server =
