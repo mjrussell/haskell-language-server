@@ -24,6 +24,7 @@ let
       strict = hself.callHackage "strict" "0.4.0.1" {};
       these = hself.callHackage "these" "1.1.1.1" {};
       assoc = hself.callHackage "assoc" "1.0.2" {};
+      semialign = hself.callHackage "semialign" "1.2.0.1" {};
 
       # Re-generate HLS drv excluding some plugins
       haskell-language-server =
