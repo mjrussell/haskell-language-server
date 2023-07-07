@@ -20,6 +20,7 @@ let
       lsp = hself.callCabal2nix "lsp" inputs.lsp {};
       lsp-types = hself.callCabal2nix "lsp-types" inputs.lsp-types {};
       lsp-test = hself.callCabal2nix "lsp-test" inputs.lsp-test {};
+      strict = hself.callHackage "strict" "0.4.0.1" {};
 
       # Re-generate HLS drv excluding some plugins
       haskell-language-server =
